@@ -1,6 +1,10 @@
+@import "./Utils/variables.scss";
+
+
+
 div {
     height: 3rem;
-    background-color: green;
+    background-color: $color-primary;
     color: white;
     font-size: 2rem;
     text-align: center;
