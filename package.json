@@ -1,0 +1,14 @@
+{
+  "name": "sass",
+  "version": "1.0.0",
+  "description": "test de l'installation sass",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./SASS/main.scss:./CSS/main.css"
+  },
+  "author": "Johan",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.57.1"
+  }
+}

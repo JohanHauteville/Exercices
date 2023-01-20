@@ -5,4 +5,11 @@ div {
   height: 3rem;
   background-color: #15dea5;
   color: white;
-}/*# sourceMappingURL=main.css.map */
+}
+
+p {
+  font-weight: 500;
+  line-height: 1rem;
+}
+
+/*# sourceMappingURL=main.css.map */
