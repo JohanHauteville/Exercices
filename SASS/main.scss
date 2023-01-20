@@ -1,12 +1,10 @@
 @import "./Utils/variables.scss";
-
+@import "./Base/font-Heading.scss";
 
 
 div {
+    @include font-heading;
     height: 3rem;
     background-color: $color-primary;
     color: white;
-    font-size: 2rem;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
 }

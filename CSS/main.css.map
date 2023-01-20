@@ -1,1 +1,1 @@
-{"version":3,"sources":["../SASS/main.scss","../SASS/Utils/_variables.scss","main.css"],"names":[],"mappings":"AAIA;EACI,YAAA;EACA,yBCNY;EDOZ,YAAA;EACA,eAAA;EACA,kBAAA;EACA,yCAAA;AEHJ","file":"main.css"}
+{"version":3,"sources":["../SASS/main.scss","../SASS/Base/_font-Heading.scss","../SASS/Utils/_variables.scss","main.css"],"names":[],"mappings":"AAIA;ECDI,eAAA;EACA,kBAAA;EACA,yCAAA;EDCA,YAAA;EACA,yBEPY;EFQZ,YAAA;AGDJ","file":"main.css"}
