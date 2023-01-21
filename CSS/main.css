@@ -1,43 +1,41 @@
-.article__heading--orange {
-  color: #cc8624;
-}
-.article__heading--rose {
-  color: #cc2475;
-}
-.article__heading--bleu {
-  color: #2469CC;
-}
-.article__heading--vert {
-  color: #24cc24;
+.container {
+  background-color: rgb(237, 246, 247);
 }
 
-body {
+.form {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 100px 0;
 }
-
-.container {
-  display: flex;
-  justify-content: center;
+.form__group {
   width: 60%;
-  margin-top: 80px;
 }
-
-.btn {
-  background: #011c37;
-  color: #15DEA5;
-  font-size: 3rem;
-  cursor: pointer;
-  padding: 1.85rem 3rem;
-  transform: scale(1);
-  transition: transform 300ms, border-radius 300ms, color 1s, background 2s;
+.form__group label {
+  position: relative;
+  left: 2rem;
+  font-family: "Montserrat", sans-serif;
+  color: #6300a0;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
-.btn:hover {
-  background: #15DEA5;
-  transform: scale(1.15);
-  border-radius: 50px;
-  color: #cc2475;
+.form__group input {
+  border: 2px solid #fff;
+  border-radius: 100rem;
+  color: #6300a0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.5rem;
+  outline: none;
+  padding: 0.5rem 1.5rem;
+  width: 100%;
+}
+.form__group input:focus {
+  border: 2px solid #6300a0;
+}
+.form__group input:invalid {
+  background: #b20a37;
+  border: 2px solid #b20a37;
+  color: #fff;
 }
 
 /*# sourceMappingURL=main.css.map */
