@@ -4,10 +4,12 @@
   "description": "test de l'installation sass",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./SASS/main.scss:./CSS/main.css"
+    "sass": "sass --watch ./SASS/main.scss:./CSS/main.css",
+    "prefix": "postcss ./CSS/main.css --use autoprefixer -d ./CSS/prefixed/"
   },
   "author": "Johan",
   "license": "ISC",
+  "browserslist": "last 4 versions",
   "dependencies": {
     "sass": "^1.57.1"
   }

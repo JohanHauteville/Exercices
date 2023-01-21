@@ -1,15 +1,43 @@
-div {
-  font-size: 2rem;
-  text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
-  height: 3rem;
-  background-color: #15dea5;
-  color: white;
+.article__heading--orange {
+  color: #cc8624;
+}
+.article__heading--rose {
+  color: #cc2475;
+}
+.article__heading--bleu {
+  color: #2469CC;
+}
+.article__heading--vert {
+  color: #24cc24;
 }
 
-p {
-  font-weight: 500;
-  line-height: 1rem;
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  width: 60%;
+  margin-top: 80px;
+}
+
+.btn {
+  background: #011c37;
+  color: #15DEA5;
+  font-size: 3rem;
+  cursor: pointer;
+  padding: 1.85rem 3rem;
+  transform: scale(1);
+  transition: transform 300ms, border-radius 300ms, color 1s, background 2s;
+}
+.btn:hover {
+  background: #15DEA5;
+  transform: scale(1.15);
+  border-radius: 50px;
+  color: #cc2475;
 }
 
 /*# sourceMappingURL=main.css.map */

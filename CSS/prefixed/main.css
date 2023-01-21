@@ -1,0 +1,36 @@
+.article__heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.article__heading--orange {
+  color: #cc8624;
+}
+.article__heading--rose {
+  color: #cc2475;
+}
+.article__heading--bleu {
+  color: #2469CC;
+}
+.article__heading--vert {
+  color: #24cc24;
+}
+
+div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 2rem;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 3rem;
+  background-color: #15dea5;
+  color: white;
+}
+
+p {
+  font-weight: 500;
+  line-height: 1rem;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL1NBU1MvbWFpbi5zY3NzIiwiLi4vbWFpbi5jc3MiLCIuLi8uLi9TQVNTL0Jhc2UvX2ZvbnQtSGVhZGluZy5zY3NzIiwiLi4vLi4vU0FTUy9VdGlscy9fdmFyaWFibGVzLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBcUJBO0VBRUcsb0JBQUE7RUFBQSxvQkFBQTtFQUFBLGFBQUE7QUNyQkg7QURhUTtFQUNJLGNBVlE7QUNEcEI7QURVUTtFQUNJLGNBVlE7QUNFcEI7QURPUTtFQUNJLGNBVlE7QUNLcEI7QURJUTtFQUNJLGNBVlE7QUNRcEI7O0FEYUE7RUFDSSxvQkFBQTtFQUFBLG9CQUFBO0VBQUEsYUFBQTtFRXpCQSxlQUFBO0VBQ0Esa0JBQUE7RUFDQSx5Q0FBQTtFRnlCQSxZQUFBO0VBQ0EseUJHL0JZO0VIZ0NaLFlBQUE7QUNSSjs7QURXQTtFQUNJLGdCQUFBO0VBQ0EsaUJBQUE7QUNSSiIsImZpbGUiOiJtYWluLmNzcyJ9 */
