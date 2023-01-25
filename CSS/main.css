@@ -4,7 +4,7 @@
   flex-direction: column-reverse;
   align-items: center;
   justify-content: space-around;
-  height: 40rem;
+  height: 60rem;
 }
 
 .btn {
@@ -15,18 +15,29 @@
   border-radius: 10rem;
   color: #fff;
 }
-.btn:active + .ball {
-  transform: scale(1);
+.btn:hover + .boxes > .boxes--rotDegrees {
+  transform: rotate(0deg);
+}
+.btn:hover + .boxes > .boxes--rotTurns {
+  transform: rotate(0turn);
 }
 
-.ball {
-  width: 20rem;
-  height: 20rem;
+.boxes__base {
+  width: 100px;
+  height: 100px;
   background: #22f596;
   margin-bottom: 1rem;
-  border-radius: 10rem;
-  transform: scale(0.1);
-  transition: transform 4000ms;
+  color: #fff;
+  text-align: center;
+}
+.boxes--rotDegrees {
+  transform: rotate(-360deg);
+  transition: transform 500ms ease-in-out;
+}
+.boxes--rotTurns {
+  background: pink;
+  transform: rotate(-1turn);
+  transition: transform 500ms ease-in-out;
 }
 
 /*# sourceMappingURL=main.css.map */
