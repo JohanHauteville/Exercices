@@ -1,59 +1,85 @@
-$cd-txt: #6300a0;
-$cd-txt--invalid: #fff;
-$cd-danger : #b20a37 ;
-$cd-box: #000;
-$shake-intensity: 1%;
+// $cd-txt: #6300a0;
+// $cd-txt--invalid: #fff;
+// $cd-danger : #b20a37 ;
+// $cd-box: #000;
+// $shake-intensity: 1%;
 
-@keyframes headshake {
-    25% {
-        // entièrement à droite
-        transform: translateX($shake-intensity);
-    }
-    75% {
-        // entièrement à gauche
-        transform: translateX(-$shake-intensity);
-    }
-}
+// @keyframes headshake {
+//     25% {
+//         // entièrement à droite
+//         transform: translateX($shake-intensity);
+//     }
+//     75% {
+//         // entièrement à gauche
+//         transform: translateX(-$shake-intensity);
+//     }
+// }
 
-@mixin position-flex{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+// @mixin position-flex{
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+// }
 
+
+// .container{
+//     // @include position-flex;
+//      position: fixed;
+//      top: 20%;
+//      left: 50%;
+//      transform: translate(-50%, 50%);
+// }
+
+// .form {
+//     margin-top: 100px;
+//     &__group {
+//         // @include position-flex;
+//         & input {
+//             border: 2px solid $cd-box;
+//             border-radius: 100rem;
+//             color: $cd-txt;
+//             font-family: 'Montserrat', sans-serif;
+//             font-size: 2.5rem;
+//             outline: none;
+//             padding: .5rem 1.5rem;
+//             width: 100%;
+//             &:focus, &:active {
+//                 border: 2px solid $cd-txt;
+//             }
+//             &:not(:focus):invalid {
+//                 background-color: $cd-danger;
+//                 border: 2px solid $cd-danger;
+//                 color: $cd-txt--invalid;
+//                 animation: headshake 100ms cubic-bezier(.4,.1,.6,.9);
+//                 animation-iteration-count: 2;
+//             }
+//         }
+        
+//     }
+// }
+
+// CODE LOADING FUNCTION
+
+$cd-bars: #15DEA5;
+$size: 3vh;
 
 .container{
-    // @include position-flex;
-     position: fixed;
-     top: 20%;
-     left: 50%;
-     transform: translate(-50%, 50%);
-}
 
-.form {
-    margin-top: 100px;
-    &__group {
-        // @include position-flex;
-        & input {
-            border: 2px solid $cd-box;
-            border-radius: 100rem;
-            color: $cd-txt;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 2.5rem;
-            outline: none;
-            padding: .5rem 1.5rem;
-            width: 100%;
-            &:focus, &:active {
-                border: 2px solid $cd-txt;
-            }
-            &:not(:focus):invalid {
-                background-color: $cd-danger;
-                border: 2px solid $cd-danger;
-                color: $cd-txt--invalid;
-                animation: headshake 100ms cubic-bezier(.4,.1,.6,.9);
-                animation-iteration-count: 2;
-            }
-        }
-        
+          position: fixed;
+          top: 20%;
+          left: 50%;
+          transform: translate(-50%, 50%);
+     }
+
+
+.load {
+    width: $size*10;
+    height: $size*7.5;
+    display: flex;
+    justify-content: space-evenly;
+    &__bar {
+        background-color: #15DEA5;
+        height: 100%;
+        width: $size;
     }
 }
