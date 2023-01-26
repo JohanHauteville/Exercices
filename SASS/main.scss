@@ -62,15 +62,26 @@
 
 $cd-bars: #15DEA5;
 $size: 3vh;
+$num-bars: 5;
+$anim-dur: 1000ms;
+$anim-delay: $anim-dur / $num-bars;
+$cd-bars-inv: #0E397F;
+
+@keyframes bars {
+    0%{
+        transform: scaleY(0.5);
+    }
+    100%{
+        transform: scaleY(1.0);
+    }
+}
 
 .container{
-
-          position: fixed;
-          top: 20%;
-          left: 50%;
-          transform: translate(-50%, 50%);
-     }
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20vh;
+}
 
 .load {
     width: $size*10;
@@ -81,5 +92,25 @@ $size: 3vh;
         background-color: #15DEA5;
         height: 100%;
         width: $size;
+        animation: bars $anim-dur backwards infinite ease-in-out alternate;
+        @for $i from 1 through $num-bars{
+            &--#{$i}{
+                animation-delay: $anim-delay * $i;
+            }
+            &--#{$i}-inv {
+                animation-delay: $anim-delay * $i + random(100)*15ms;
+                animation-direction: alternate-reverse;
+                background-color: $cd-bars-inv;
+                &:hover {
+                    animation-play-state: paused;
+                }
+            }
+        }
     }
+}
+
+span {
+    margin: 20px 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight:600;
 }
