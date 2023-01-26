@@ -1,39 +1,40 @@
+@keyframes headshake {
+  25% {
+    transform: translateX(1%);
+  }
+  75% {
+    transform: translateX(-1%);
+  }
+}
 .container {
-  background-color: rgb(237, 246, 247);
-  display: flex;
-  flex-direction: column-reverse;
-  align-items: center;
-  justify-content: space-around;
-  height: 60rem;
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, 50%);
 }
 
-.btn {
-  background: #22f596;
-  font-size: 2rem;
-  font-family: Arial, Helvetica, sans-serif;
-  cursor: pointer;
-  padding: 1rem 2.5rem;
-  border-radius: 10rem;
+.form {
+  margin-top: 100px;
+}
+.form__group input {
+  border: 2px solid #000;
+  border-radius: 100rem;
+  color: #6300a0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.5rem;
+  outline: none;
+  padding: 0.5rem 1.5rem;
+  width: 100%;
+}
+.form__group input:focus, .form__group input:active {
+  border: 2px solid #6300a0;
+}
+.form__group input:not(:focus):invalid {
+  background-color: #b20a37;
+  border: 2px solid #b20a37;
   color: #fff;
-}
-.btn:active + .progress > .progress__bar {
-  transform: scaleX(1);
-}
-
-.progress {
-  width: 500px;
-  height: 30px;
-  border: 2px solid #011c37;
-  background-color: #fff;
-  border-radius: 20px;
-  overflow: hidden;
-}
-.progress__bar {
-  border: 0px;
-  background-color: #22f596;
-  transform: scaleX(0);
-  transition: transform 1000ms cubic-bezier(0.32, 0, 0.07, 1);
-  transform-origin: left;
+  animation: headshake 100ms cubic-bezier(0.4, 0.1, 0.6, 0.9);
+  animation-iteration-count: 2;
 }
 
 /*# sourceMappingURL=main.css.map */

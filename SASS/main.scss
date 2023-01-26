@@ -1,56 +1,59 @@
-@import "./Utils/variables";
-@import "./Base/font-Heading.scss";
-
-$cd-btn: #011c37;
-$cd-txt: #22f596;
-$cd-box: #fff;
+$cd-txt: #6300a0;
 $cd-txt--invalid: #fff;
-$cd-danger: #b20a37;
-$ball-size: 100px;
+$cd-danger : #b20a37 ;
+$cd-box: #000;
+$shake-intensity: 1%;
 
-.container{
-    background-color: rgb(237, 246, 247);
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
-    justify-content: space-around;
-    height: 60rem;
-
-}
-
-
-.btn {
-    background: $cd-txt;
-    font-size: 2rem;
-    font-family: Arial, Helvetica, sans-serif;
-    cursor: pointer;
-    padding: 1rem 2.5rem;
-    border-radius: 10rem;
-    color: $cd-box;
-    &:active{
-        & + .progress {
-            & > .progress__bar {
-                transform: scaleX(1);
-                
-            }
-        }
-       
+@keyframes headshake {
+    25% {
+        // entièrement à droite
+        transform: translateX($shake-intensity);
+    }
+    75% {
+        // entièrement à gauche
+        transform: translateX(-$shake-intensity);
     }
 }
 
-.progress{
-    width: 500px;
-    height: 30px;
-    border: 2px solid #011c37;
-    background-color: #fff;
-    border-radius: 20px;
-    overflow: hidden;
-    &__bar{
-        border: 0px;
-        background-color: #22f596;
-        transform: scaleX(0);
-        transition: transform 1000ms cubic-bezier(.32,0,.07,1);
-        transform-origin: left;
+@mixin position-flex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+
+.container{
+    // @include position-flex;
+     position: fixed;
+     top: 20%;
+     left: 50%;
+     transform: translate(-50%, 50%);
+}
+
+.form {
+    margin-top: 100px;
+    &__group {
+        // @include position-flex;
+        & input {
+            border: 2px solid $cd-box;
+            border-radius: 100rem;
+            color: $cd-txt;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            outline: none;
+            padding: .5rem 1.5rem;
+            width: 100%;
+            &:focus, &:active {
+                border: 2px solid $cd-txt;
+            }
+            &:not(:focus):invalid {
+                background-color: $cd-danger;
+                border: 2px solid $cd-danger;
+                color: $cd-txt--invalid;
+                animation: headshake 100ms cubic-bezier(.4,.1,.6,.9);
+                animation-iteration-count: 2;
+            }
+        }
+        
     }
 }
